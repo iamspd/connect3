@@ -30,6 +30,7 @@
             android:layout_column="0"
             android:layout_marginTop="16dp"
             android:layout_marginStart="18dp"
+            android:tag="0"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -39,7 +40,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="40dp"
             android:onClick="dropIn"
-            android:tag="2"
+            android:tag="1"
             android:contentDescription="@string/image_coin"/>
 
         <ImageView
@@ -49,6 +50,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="40dp"
             android:onClick="dropIn"
+            android:tag="2"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -58,6 +60,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginStart="18dp"
             android:onClick="dropIn"
+            android:tag="3"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -67,6 +70,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginStart="40dp"
             android:onClick="dropIn"
+            android:tag="4"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -76,6 +80,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginStart="40dp"
             android:onClick="dropIn"
+            android:tag="5"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -85,6 +90,7 @@
             android:layout_marginTop="58dp"
             android:layout_marginStart="18dp"
             android:onClick="dropIn"
+            android:tag="6"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -94,6 +100,7 @@
             android:layout_marginTop="58dp"
             android:layout_marginStart="40dp"
             android:onClick="dropIn"
+            android:tag="7"
             android:contentDescription="@string/image_coin" />
 
         <ImageView
@@ -103,6 +110,7 @@
             android:layout_marginTop="58dp"
             android:layout_marginStart="42dp"
             android:onClick="dropIn"
+            android:tag="9"
             android:contentDescription="@string/image_coin" />
 
 
