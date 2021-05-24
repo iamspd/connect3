@@ -3,11 +3,19 @@ package com.iamspd.connect3;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    // widgets
+    private LinearLayout winnerLayout;
+    private TextView winnerText;
 
     // constants
     private static final String TAG = "MainActivity";
@@ -65,6 +73,18 @@ public class MainActivity extends AppCompatActivity {
                         gameState[winningPosition[0]] != 2) {
 
                     // someone has won!
+                    winnerLayout = findViewById(R.id.winnerLayout);
+                    winnerLayout.setVisibility(View.VISIBLE);
+
+                    winnerText = findViewById(R.id.tvWinner);
+
+                    if (gameState[winningPosition[0]] == 0){
+                        winnerText.setText("Player Yellow has won!");
+                    } else {
+                        winnerText.setText("Player Red has won!");
+                    }
+
+
 
                     Log.i(TAG, "Winner is: " + gameState[winningPosition[0]]);
                 }
