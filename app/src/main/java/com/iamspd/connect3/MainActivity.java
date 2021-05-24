@@ -81,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
                     // someone has won!
                     isActive = false;
 
-                    String winner = "Yellow";
+                    String winner = "Red";
 
                     if (gameState[winningPosition[0]] == 0) {
-                        winner = "Red";
+                        winner = "Yellow";
                     }
 
                     winnerLayout = findViewById(R.id.winnerLayout);
