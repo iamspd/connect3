@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     // widgets
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     // someone has won!
                     String winner = "Yellow";
 
-                    if (gameState[winningPosition[0]] == 0){
+                    if (gameState[winningPosition[0]] == 0) {
                         winner = "Red";
                     }
 
@@ -85,13 +87,20 @@ public class MainActivity extends AppCompatActivity {
                     winnerText = findViewById(R.id.tvWinner);
                     winnerText.setText("Player " + winner + " has won!");
 
-
-
-
-
-                    Log.i(TAG, "Winner is: " + gameState[winningPosition[0]]);
                 }
             }
         }
+    }
+
+    public void startOver(View view) {
+
+        // making the LinearLayout invisible
+        winnerLayout = findViewById(R.id.winnerLayout);
+        winnerLayout.setVisibility(View.INVISIBLE);
+
+        // resetting the variables to the initial stage
+        activePlayer = 0;
+
+        Arrays.fill(gameState, 2);
     }
 }

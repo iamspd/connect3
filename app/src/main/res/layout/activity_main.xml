@@ -142,7 +142,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_gravity="center"
             android:text="Start Over"
+            android:onClick="startOver"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
