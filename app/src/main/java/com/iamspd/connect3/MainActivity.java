@@ -73,16 +73,19 @@ public class MainActivity extends AppCompatActivity {
                         gameState[winningPosition[0]] != 2) {
 
                     // someone has won!
+                    String winner = "Yellow";
+
+                    if (gameState[winningPosition[0]] == 0){
+                        winner = "Red";
+                    }
+
                     winnerLayout = findViewById(R.id.winnerLayout);
                     winnerLayout.setVisibility(View.VISIBLE);
 
                     winnerText = findViewById(R.id.tvWinner);
+                    winnerText.setText("Player " + winner + " has won!");
 
-                    if (gameState[winningPosition[0]] == 0){
-                        winnerText.setText("Player Yellow has won!");
-                    } else {
-                        winnerText.setText("Player Red has won!");
-                    }
+
 
 
 

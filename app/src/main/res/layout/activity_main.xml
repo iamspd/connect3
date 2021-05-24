@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@android:string/ok"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white" />
 
         <Button
