@@ -16,6 +16,7 @@
         android:textStyle="bold" />
 
     <GridLayout
+        android:id="@+id/gameBoard"
         android:layout_width="match_parent"
         android:layout_height="420dp"
         android:layout_centerVertical="true"

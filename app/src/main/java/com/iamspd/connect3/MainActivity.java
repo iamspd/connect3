@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     // widgets
     private LinearLayout winnerLayout;
     private TextView winnerText;
+    private GridLayout gameBoard;
 
     // constants
     private static final String TAG = "MainActivity";
@@ -100,7 +102,15 @@ public class MainActivity extends AppCompatActivity {
 
         // resetting the variables to the initial stage
         activePlayer = 0;
-
         Arrays.fill(gameState, 2);
+
+        // resetting the columns of the gameBoard to blank
+        gameBoard = findViewById(R.id.gameBoard);
+        for (int i = 0; i < gameBoard.getChildCount(); i++) {
+            ((ImageView) gameBoard.getChildAt(i)).setImageResource(0);
+        }
+
+
     }
 }
+
