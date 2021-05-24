@@ -27,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
     // variables
 
     // 0 = yellow, 1 = red
-    int activePlayer = 0;
+    private int activePlayer = 0;
+
+    private boolean isActive = true;
 
     // 2 means not yet played
-    int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
+    private int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
 
     // winning positions
-    int[][] winningPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8},
+    private int[][] winningPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8},
             {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
             {0, 4, 8}, {2, 4, 6}};
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
 
-        if (gameState[tappedCounter] == 2) {
+        if (gameState[tappedCounter] == 2 && isActive) {
 
             gameState[tappedCounter] = activePlayer;
 
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
                         gameState[winningPosition[0]] != 2) {
 
                     // someone has won!
+                    isActive = false;
+
                     String winner = "Yellow";
 
                     if (gameState[winningPosition[0]] == 0) {
@@ -96,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void startOver(View view) {
 
+        isActive = true;
+
         // making the LinearLayout invisible
         winnerLayout = findViewById(R.id.winnerLayout);
         winnerLayout.setVisibility(View.INVISIBLE);
@@ -109,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < gameBoard.getChildCount(); i++) {
             ((ImageView) gameBoard.getChildAt(i)).setImageResource(0);
         }
-
-
     }
 }
 
