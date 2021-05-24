@@ -93,6 +93,27 @@ public class MainActivity extends AppCompatActivity {
                     winnerText = findViewById(R.id.tvWinner);
                     winnerText.setText("Player " + winner + " has won!");
 
+                } else {
+
+                    // checking for if the game is over
+                    boolean gameIsOver = true;
+
+                    // loop through the gameState counter to check
+                    //      if there is no remaining position to
+                    //      be used
+                    for (int counterState : gameState) {
+                        if (counterState == 2) gameIsOver = false;
+                    }
+
+                    // setting the visibility of the layout
+                    //      and setting the appropriate text
+                    if (gameIsOver){
+
+                        winnerLayout.setVisibility(View.VISIBLE);
+
+                        winnerText.setText("It's a draw.");
+                    }
+
                 }
             }
         }
